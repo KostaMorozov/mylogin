@@ -1,0 +1,86 @@
+const users = [
+  {
+    id: 1,
+    firstName: "John",
+    lastName: "Smith",
+    email: "john@ex.com",
+    phone: "054545455",
+    country: "USA",
+  },
+  {
+    id: 2,
+    firstName: "Jon",
+    lastName: "Gon",
+    email: "Jon@ex.com",
+    phone: "054555455",
+    country: "IL",
+  },
+  {
+    id: 3,
+    firstName: "Bob",
+    lastName: "Gon",
+    email: "Bob@ex.com",
+    phone: "053355455",
+    country: "GU",
+  },
+  {
+    id: 4,
+    firstName: "Bill",
+    lastName: "Gsdn",
+    email: "JBil@ex.com",
+    phone: "05225455",
+    country: "UKL",
+  },
+  {
+    id: 5,
+    firstName: "Jon",
+    lastName: "Gon",
+    email: "Jon@ex.com",
+    phone: "054555455",
+    country: "IL",
+  },
+  {
+    id: 6,
+    firstName: "Jon",
+    lastName: "Gon",
+    email: "Jon@ex.com",
+    phone: "054555455",
+    country: "IL",
+  },
+  {
+    id: 7,
+    firstName: "Jon",
+    lastName: "Gon",
+    email: "Jon@ex.com",
+    phone: "054555455",
+    country: "IL",
+  },
+  {
+    id: 8,
+    firstName: "Jon",
+    lastName: "Gon",
+    email: "Jon@ex.com",
+    phone: "054555455",
+    country: "IL",
+  },
+  {
+    id: 9,
+    firstName: "Jon",
+    lastName: "Gon",
+    email: "Jon@ex.com",
+    phone: "054555455",
+    country: "IL",
+  },
+  {
+    id: 10,
+    firstName: "Jon",
+    lastName: "Gon",
+    email: "Jon@ex.com",
+    phone: "054555455",
+    country: "IL",
+  },
+];
+
+export function getUsers() {
+  return users.filter((user) => user);
+}
