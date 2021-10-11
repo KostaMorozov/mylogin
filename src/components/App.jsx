@@ -6,6 +6,7 @@ import Login from './login';
 import Register from './register';
 import { getUsers } from './../fakeServices/usersService';
 import { paginate } from './paginate';
+import AddUser from './addUser';
 
 class App extends Component {
     state = {
@@ -20,6 +21,13 @@ class App extends Component {
     handleSearch = (e) =>{
         this.setState({searchedUser:e});
     }
+    handleAddUser = (user,history) =>{
+        let users = [...this.state.users];
+        user.id = 11;
+        users.push(user);
+        this.setState({users});
+        history.replace("/users");
+    }
     render() { 
         const {users,pageSize:displayPages,currentPage,searchedUser} = this.state;
         const searchedUsers = users.filter(user =>(
@@ -32,8 +40,9 @@ class App extends Component {
                     <Navbar/>
                     <div className="content">
                         <Switch>
-                            <Route path="/users" render={() => 
+                            <Route path="/users" render={(props) => 
                             <UsersTable 
+                            {...props}
                             pageSize={displayPages}
                             tableSize={searchedUsers.length}
                             currentPage={currentPage}
@@ -43,6 +52,7 @@ class App extends Component {
                             onSearch={this.handleSearch}
                             />}/>
                             <Route path="/login" component={Login}/>
+                            <Route path="/addUser" render={(props)=><AddUser {...props} onAddUser={this.handleAddUser}/>}/>
                             <Route path="/register" component={Register}/>
                         </Switch>
                     </div>

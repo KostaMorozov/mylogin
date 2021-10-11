@@ -24,7 +24,10 @@ export default function Navbar() {
             Users
           </NavLink>
           <NavLink className="nav-item nav-link" to="/customers">
-            Customers
+            CustomersaddUser
+          </NavLink>
+          <NavLink className="nav-item nav-link" to="/addUser">
+            Add User
           </NavLink>
           <NavLink className="nav-item nav-link" to="/rentals">
             Rentals
